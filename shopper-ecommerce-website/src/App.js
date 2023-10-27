@@ -5,6 +5,7 @@ import ShopCategory from './Pages/ShopCategory';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+import Login from '../src/Pages/Login'
 import LoginSignup from './Pages/LoginSignup';
 import Footer from './Components/Footer/Footer';
 import men_banner from './Components/Assets/banner_mens.png'
@@ -24,6 +25,7 @@ function App() {
         <Route path=':productId' element={<Product/>}/>
         </Route>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/loginsign' element={<Login/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
       <Footer/>
