@@ -9,7 +9,7 @@
     width: 580px;
     height: 600px;
     background: #ffffff;
-    margin: -75px auto;
+    margin: -80px auto;
     padding: 40px 60px;
 }
 
@@ -36,10 +36,11 @@
 
 .registration-container button{
     width: 580px;
-    height: 72px;
+    height: 70px;
     color: #ffffff;
     background: #ff4141;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     border: none;
     font-size: 24px;
     font-weight: 500;
