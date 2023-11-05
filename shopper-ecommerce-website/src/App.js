@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from '../src/Components/Navbar/Navbar';
 import Shop from './Pages/Shop';
 import ShopCategory from './Pages/ShopCategory';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import {BrowserRouter,Routes,Route, Outlet} from 'react-router-dom';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Login from '../src/Pages/Login'
@@ -12,9 +12,11 @@ import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from './Components/Assets/banner_women.png'
 import kid_banner from './Components/Assets/banner_kids.png'
 import Registration from './Pages/Registration'
+import Protected from './Components/Protected/Protected';
 function App() {
   return (
     <div>
+        <Outlet/>
       <BrowserRouter>
       <Navbar/>
       <Routes>
@@ -29,6 +31,9 @@ function App() {
         <Route path='/login' element={<LoginSignup/>}/>
         <Route path='/loginsign' element={<Login/>}/>
         <Route path='/registration' element={<Registration/>}/>
+        <Route path="/" element={<Protected/>}>
+        <Route path="/" index element={<Shop/>}/>
+       </Route>
       </Routes>
       <Footer/>
       </BrowserRouter>
